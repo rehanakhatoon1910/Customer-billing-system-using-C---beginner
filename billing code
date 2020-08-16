@@ -1,0 +1,691 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<string.h>
+#include<windows.h>
+#include<time.h>
+#include "rlutil.h"
+#define space "\t\t\t"
+void clrscr();
+void clrscr()
+{
+	system("@cls||clear");
+}
+int  login();
+void items();
+void product();
+void label();
+void label()
+{
+	int i;
+	char username[100];
+	char userpwd[50];
+	system("COLOR F2");
+	printf("\n\n\n\n\n");
+	setColor(RED);
+	//userid field
+	printf("\n\n"space space"\t\t%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+    printf("\n"space"\t\t Enter your username  : %c                       %c\n",179,179);
+    printf(""space space"\t\t%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+   gotoxy(66,11);
+   scanf("%s",username);
+   
+   //password field
+   setColor(RED);
+   	printf("\n\n"space space"\t\t%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+    printf("\n"space"\t\t Enter password       : %c                       %c\n",179,179);
+    printf(""space space"\t\t%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+   gotoxy(66,15);
+        
+        for(i=0;i<12;i++)
+	{
+		userpwd[i]=getch();
+		printf("*");
+	}
+	userpwd[i]='\0';
+	getch();
+	
+	if(!strcmp(username,"rehanakhatoon")&&!strcmp(userpwd,"rehana123456")||!strcmp(username,"priyankakumari")&&!strcmp(userpwd,"priyanka9256")||!strcmp(username,"ritukumari")&&!strcmp(userpwd,"ritukumari29")||!strcmp(username,"priyanka")&&!strcmp(userpwd,"priyanka1111"))
+{
+//	setColor(GRAY);
+setColor(GREEN);
+	printf("\n\n\n\t\t\t\t\t\t\t\tLog In Successful\n\n");
+	Sleep(1500);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+	clrscr();
+	printf("\n");
+	system("COLOR F2");
+	
+	Sleep(1000);
+	setColor(BLUE);
+	printf(" \t\t\t\t      ##        ##    # ####   #         ,###       ,###,     ##.    .##    # ####  \n");
+	Sleep(1000);
+	setColor(GREEN);
+    printf("  \t\t\t\t       ##  ##  ##    # ###     #        #          #     #    ##  '#' ##   # ###");
+	Sleep(1000);
+	setColor(RED);
+    printf("\n \t\t\t\t\t##   ##       # ###    #####    '###        '###'     ##      ##    # ###");
+    printf("\n\n\n");
+    Sleep(1500);
+    
+}
+else
+{
+
+	printf("\n\n\t\t\t\t\t\t\tIncorrect username or password");
+	printf("\n\n\t\t\t\t\t\t\tPress double any key to Log In again");
+	getch();
+	clrscr();
+	getch();
+	login();
+}
+   
+}
+int login()
+{
+char username[100];
+char userpwd[50];
+int i;
+printf("\n\n\t\t\t\t\t\t\t-: CASHIER     LOGIN     PAGE :-");
+Sleep(500);
+label();
+//*/
+}
+
+
+
+void items()
+{
+system("COLOR F1");
+printf("\n");
+
+printf("\n\n");
+
+printf(""space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  PRODUCT NAME:-\t\t\t\t\tMRP(Rs.)    SALE PRICE  %c",179,179);
+printf("\n");
+printf(""space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  1.Basmati Rice(5 kg pack)\t\t\t600\t\t540     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  2.Wheat flour(5 kg pack)\t\t\t250 \t\t210     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  3.Brown bread\t\t\t\t\t80\t\t60      %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  4.Cadbury Dairymilk\t\t\t\t150\t\t150     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  5.Troppicana apple juice\t\t\t100\t\t95      %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  6.Apple\t\t\t\t        120/kg\t\t110     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  7.Banana\t\t\t\t        55/dozon\t50      %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//intf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  8.jhonson's baby [oil(60mL) & powder(60g)]      450\t\t410     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  9.Lo'real Shampoo(600mL)\t\t\t500\t\t485     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c 10.Lotus cream(60g pack)\t\t\t390\t\t385     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c 11.Fair & Handsom(50g)\t\t\t\t200\t\t195     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c 12.Lotus facewash(100g)\t\t\t\t250\t\t240     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c 13.Dettol handwas(200mL)\t\t\t150\t\t145     %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c 14.Cinthol soap\t\t\t\t\t50/piece\t48      %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c 15.Surf Excel\t\t\t\t\t100/kg\t\t95      %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+//printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 218, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c 16.Dishwash\t\t\t\t\t50\t\t50      %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 192, 196, 196,196,196,196,196,196,196,196,196, 196, 196, 196, 196,196,196, 196, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+
+}
+
+
+
+void product()
+{
+	char acc[100];
+int c[100],i=0,cvv;
+char v[500];
+system("COLOR F1");
+int ch,t,s,count=0,ch2;
+int n,choice,m,price[21],total=0;
+FILE *fp3;
+
+char p[30][30]={" ","Basmati Rice(5 kg pack)\t\t\t540","Wheat flour(5 kg pack)\t\t\t210","Brown bread\t\t\t\t60","Cadbury dairymilk\t\t\t150","Tropicanna Apple juice\t\t\t95","Apple\t\t\t\t\t110","Banana\t\t\t\t\t50","jhonson's baby\t\t\t\t410","Lo'real Shampoo\t\t\t\t485","Lotus cream\t\t\t\t385","Fair & handsom\t\t\t\t195","Lotus facewash\t\t\t\t240","Dettol Handwash\t\t\t\t145","Cinthol soap\t\t\t\t48","Surf Excel\t\t\t\t95","Dishwash\t\t\t\t50"};
+
+//struct stack *list;
+//list=(struct stack*)malloc(sizeof(struct stack*));
+do
+{
+setColor(GREEN);
+printf("\n\t\t\t\t\t1.ADD PRODUCT");
+printf("\n\t\t\t\t\t2.DELETE PRODUCT (IF YES THEN ALL YOUR PREVIOUS ITEMS AND RECORDS WILL BE DELETED )");
+printf("\n\t\t\t\t\t3.TOTAL AMOUNT");
+s:
+//printf("\n\n\t\t\t\t\tEnter your choice from above:-");
+//	printf("\n");
+
+setColor(RED);
+	
+    printf("\n\n\n"space"\t\tEnter Your choice From Above:-   ");
+   
+   //gotoxy(80,63);
+	scanf("%d",&ch);	
+ clrscr();
+
+switch(ch)
+{
+case 1:
+items();
+break;
+case 2:
+	
+
+fp3=fopen("rehu.txt","w");
+if(fp3==NULL)
+{
+	printf("Error in opening file\n");
+	return(-1);
+}
+	
+clrscr();
+clrscr();
+items();
+product();
+break;
+case 3:
+goto t;
+break;
+break;
+default:
+{
+printf("\n\t\t\t\t\tINVALID CHOICE");
+goto s;
+
+}
+}
+printf("\n\n\t\t\t\t\tEnter Your Product Choice:-  ");
+scanf("%d",&choice);
+
+printf("\t\t\t\t\t-------------------------\n");
+setColor(BLUE);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c",218, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  PRODUCT NAME\t\t\t\tMRP(Rs.) %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c",192, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 217);
+
+if(choice!=0)
+{
+if(choice==1)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*540;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nBasmati Rice(5 kg pack)\t\t\t%d",m*540);
+fclose(fp);
+}
+
+else if(choice==2)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*210;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nWheat flour(5 kg pack)\t\t\t%d",m*210);
+fclose(fp);
+}
+
+else if(choice==3)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*60;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nBrown bread\t\t\t\t%d",m*60);
+fclose(fp);
+}
+
+else if(choice==4)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*150;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nCadbury dairymilk\t\t\t%d",m*150);
+fclose(fp);
+}
+
+else if(choice==5)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*95;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nTropicanna Apple juice\t\t\t%d",m*95);
+fclose(fp);
+}
+
+else if(choice==6)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*110;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nApple\t\t\t\t\t%d",m*110);
+fclose(fp);
+}
+
+else if(choice==7)
+{
+	printf("\n\n\t\t\t\t\t%s",p[choice]);
+printf("\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*50;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nBanana\t\t\t\t\t%d",m*50);
+fclose(fp);
+}
+
+else if(choice==8)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*410;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\njhonson's baby\t\t\t\t%d",m*410);
+fclose(fp);
+}
+
+else if(choice==9)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*485;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nLo'real Shampoo\t\t\t\t$d",m*485);
+fclose(fp);
+}
+
+else if(choice==10)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*385;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nLotus cream\t\t\t\t%d",m*385);
+fclose(fp);
+}
+
+else if(choice==11)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*195;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nFair & handsom\t\t\t\t%d",m*195);
+fclose(fp);
+}
+
+else if(choice==12)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*240;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nLotus facewash\t\t\t\t%d",m*240);
+fclose(fp);
+}
+
+else if(choice==13)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*145;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nDettol Handwash\t\t\t\t%d",m*145);
+fclose(fp);
+}
+
+else if(choice==14)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*48;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nCinthol soap\t\t\t\t%d",m*48);
+fclose(fp);
+}
+
+else if(choice==15)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:- ");
+scanf("%d",&m);
+price[choice]=m*95;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nSurf Excel\t\t\t\t%d",m*95);
+fclose(fp);
+}
+}
+
+else if(choice==16)
+{
+	printf("\n\t\t\t\t\t%s",p[choice]);
+printf("\n\n\t\t\t\t\tQuantity:-  ");
+scanf("%d",&m);
+price[choice]=m*50;
+total+=price[choice];
+printf("\t\t\t\t\tPrice:-%d",price[choice]);
+printf("\n\n\t\t\t\t\t---------------------------");
+FILE *fp;
+fp=fopen("rehu.txt","a+");
+if(fp==NULL)
+{
+	printf("error in opening file\n");
+	return(-1);
+}
+fprintf(fp,"\nDishwash\t\t\t\t%d",m*50);
+fclose(fp);
+}
+else
+printf("\n\n\t\t\t\t\tNOT IN THE LIST");
+Sleep(100);
+
+count++;
+printf("\n");
+ t:
+ total=total+0;
+}while(ch!=3);
+if(choice==0)
+{
+printf("\n\t\t\t\t INVALID");
+}
+FILE *fp2;
+fp2=fopen("rehu.txt","r");
+if(fp2==NULL)
+{
+	printf("Error in opening file\n");
+	return(-1);
+}
+setColor(RED);
+printf("\n\t\t\t\t\t     YOUR CHOOSEN PRODUCTS ARE GIVEN BELOW:-\n");
+printf("\t\t\t\t\t-----------------------------------------------\n");
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c",218, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 191);
+printf("\n\t\t\t\t      %c  PRODUCT NAME\t\t\t\tMRP(Rs.) %c",179,179);
+printf("\n"space"\t      %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",192, 196, 196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196, 196, 196, 196, 196, 196, 196, 196, 196, 196,196,196, 196, 196, 196, 196, 196, 196, 217);
+Sleep(100);
+setColor(RED);
+while(!feof(fp2))
+{
+	Sleep(100);
+	printf("\t\t\t\t\t");
+	fgets(v,500,fp2);
+	puts(v);
+}
+fclose(fp2);
+setColor(GREEN);
+printf("\n\n\t\t\t\t\tTOTAL NUMBER OF PRODUCTS  = %d",count);
+Sleep(100);
+printf("\n\t\t\t\t\tTOTAL AMOUNT TO BE PAID=  Rs. %d",total);
+printf("\n\n");	
+printf("\n\n");	
+setColor(BLUE);
+printf("\n\t\t\t\t\t     PRESS ENTER FOR PAYMENT METHOD\n\n");
+getch();
+clrscr();
+printf("\n\n\n\n\n\n");
+setColor(RED);
+printf("\n\t\t\t\t\t     1.CARD PAYMENT\n");
+printf("\n\t\t\t\t\t     2.CASH PAYMENT\n");
+printf("\n\n\t\t\t\t\t     ENTER YOUR PAYMENT METHOD:-");
+scanf("%d",&ch2);
+setColor(BLUE);
+switch(ch2)
+{
+	case 1:
+	printf("\n\t\t\t\t\t     -: ENTER YOUR CARD NUMBER:");
+	 for(i=0;i<12;i++)
+	{
+		acc[i]=getch();
+		printf("*");
+	}
+	acc[i]='\0';
+	getch();
+	printf("\n\t\t\t\t\t     -: ENTER YOUR PIN:");
+	scanf("%d",&cvv);
+	setColor(GREEN);
+	printf("\n\n\t\t\t\t\t--------------------------------------");
+	printf("\n\n\t\t\t\t\t     PAYMENT SUCCESSFUL\n\n");
+	printf("\n\n\t\t\t\t\t--------------------------------------");
+	printf("\n\t\t\t\t\t     VISIT AGAIN !! :)\n\n");
+	setColor(BLUE);
+	printf("\n\n\t\t\t\t\t       :-PRESS ENTER TO GENERATE BILL");
+	break;
+    case 2:
+    	setColor(GREEN);
+	printf("\n\n\t\t\t\t\t--------------------------------------");
+	printf("\n\n\t\t\t\t\t     PAYMENT SUCCESSFUL\n\n");
+	printf("\n\n\t\t\t\t\t--------------------------------------");
+	printf("\n\t\t\t\t\t     VISIT AGAIN !! :)\n\n");
+	setColor(BLUE);
+	printf("\n\n\t\t\t\t\t       PRESS ENTER TO GENERATE BILL");
+		break;
+	default:
+	printf("\n\t\t\t\t\t     INVALID CHOICE\n");	
+}getch();
+time_t d;   // not a primitive datatype
+    time(&d);
+sprintf(c,"\n \n\n\nTOTAL BILL  :  Rs  %d \n\n\n BILLING TIME : %s",total,ctime(&d));//printing message
+ MessageBoxA(0,c, " TOTAL BILL", MB_OK );//heading
+}
+int main()
+{
+	FILE *fp;
+fp=fopen("rehu.txt","w");
+if(fp==NULL)
+{
+	printf("Error in opening file\n");
+	return(-1);
+}
+	setBackgroundColor(WHITE);
+	login();
+	product();
+}
